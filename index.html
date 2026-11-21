@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaditya Uniyal | AI Systems Engineer & Software Architect</title>
+  <meta name="description" content="Portfolio of Aaditya Uniyal: AI Systems Engineer, Distributed Backend Architect, and Computer Science Student at Graphic Era University. Specializing in Multi-Agent LLMs, RAG, and Cloud Engines.">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Aaditya Uniyal | AI Systems Engineer & Software Architect">
+  <meta property="og:description" content="Explore selected engineering projects: Nexus (3D GIS + Dual LLM), Quorum (Distributed RAG), Mini-AWS, and Cenlub Systems AI Internship.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22><text y=%2222%22 font-size=%2222%22>⚡</text></svg>">
+
+  <!-- Google Fonts: Syne, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+  <!-- Background Ambient Atmosphere -->
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-grid"></div>
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+  </div>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <nav class="nav-bar">
+      <a href="#hero" class="nav-brand" title="Aaditya Uniyal Portfolio">
+        <span class="brand-dot"></span>
+        <span>Aaditya Uniyal</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#leetcode" class="nav-link">LeetCode</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#terminal" class="nav-link">Console</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Command Palette Trigger -->
+        <button class="cmd-k-trigger" id="cmd-trigger" title="Open Quick Command Palette (Ctrl+K)">
+          <span>Search</span>
+          <span class="cmd-key">⌘K</span>
+        </button>
+
+        <!-- Sound Synthesizer Toggle -->
+        <button class="nav-btn" id="sound-toggle" title="Toggle Tactile Audio">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle mobile menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Personal Narrative & Call to Actions -->
+          <div class="hero-content">
+            <div class="hero-meta-pill">
+              <span class="brand-dot"></span>
+              <span>Available for AI Engineering & SDE Internships / Roles</span>
+            </div>
+
+            <h1 class="hero-title">
+              Engineering <span class="text-gradient">Intelligent Systems</span> & Distributed Scale.
+            </h1>
+
+            <div class="hero-roles">
+              <span class="role-prefix">//</span>
+              <span class="dynamic-role" id="dynamic-role">AI Systems Engineer</span>
+            </div>
+
+            <p class="hero-bio">
+              Hi, I'm <strong>Aaditya Uniyal</strong>. Computer Science Engineering student at <strong>Graphic Era Deemed to be University</strong>, passionate about architecting multi-agent LLM pipelines, asynchronous event-driven backends, and spatial intelligence platforms. GDG Lead with <strong>500+ solved algorithmic challenges</strong>.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Selected Works</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#experience" class="btn btn-secondary">
+                <span>Cenlub Systems Internship</span>
+              </a>
+              <a href="#contact" class="btn btn-ghost">
+                <span>Get In Touch</span>
+              </a>
+            </div>
+
+            <!-- Recruiter Quick Links -->
+            <div class="hero-socials">
+              <a href="https://github.com/AadityaUniyal" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://leetcode.com/u/Aaditya_Cheeks/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.874 5.874 0 0 0 .349 1.017 5.938 5.938 0 0 0 4.818 3.662 5.895 5.895 0 0 0 3.343-.934l3.03-2.13a1.36 1.36 0 0 0 .223-1.916 1.372 1.372 0 0 0-1.924-.228l-3.03 2.13a3.178 3.178 0 0 1-1.802.503 3.208 3.208 0 0 1-2.6-1.974 3.174 3.174 0 0 1-.188-.55 3.018 3.018 0 0 1-.034-1.281 2.87 2.87 0 0 1 .658-1.144L8.85 8.412l4.633-4.966a1.363 1.363 0 0 0 0-1.933 1.354 1.354 0 0 0-.96-.407zM16.97 7.07a1.36 1.36 0 0 0-.96.402l-4.545 4.872a1.364 1.364 0 0 0 .005 1.933 1.362 1.362 0 0 0 1.93-.005l4.545-4.872a1.364 1.364 0 0 0-.96-2.33h-.015zM22.25 10.667h-6.848a1.36 1.36 0 1 0 0 2.72h6.848a1.36 1.36 0 1 0 0-2.72z"/></svg>
+                <span>LeetCode (500+)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Editorial Photo Frame -->
+          <div class="hero-image-wrapper">
+            <div class="portrait-frame">
+              <div class="float-badge badge-top-left">
+                <div class="badge-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <div>
+                  <div class="badge-text-title">Leadership</div>
+                  <div class="badge-text-val">GDG Lead, GEU</div>
+                </div>
+              </div>
+
+              <div class="portrait-inner">
+                <img src="assets/images/aaditya.jpg" alt="Aaditya Uniyal" class="portrait-img">
+              </div>
+
+              <div class="float-badge badge-bottom-right">
+                <div class="badge-icon emerald">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <div>
+                  <div class="badge-text-title">Problem Solving</div>
+                  <div class="badge-text-val">500+ LeetCode</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT & METRICS STRIP -->
+    <section class="impact-strip" aria-label="Key Engineering Metrics">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-number"><span class="highlight">500</span>+</div>
+            <div class="metric-label">LeetCode Challenges</div>
+            <div class="metric-sub">Graphs, DP, Trees & Concurrency</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number"><span class="highlight">Top 19</span>%</div>
+            <div class="metric-label">Goldman Sachs Hackathon</div>
+            <div class="metric-sub">Ranked among 15,593 nationwide</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number"><span class="highlight">70</span>%</div>
+            <div class="metric-label">Time Automation Reduction</div>
+            <div class="metric-sub">Cenlub Systems AI Agent Pipeline</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number"><span class="highlight">GDG</span> Lead</div>
+            <div class="metric-label">Campus Leadership</div>
+            <div class="metric-sub">Graphic Era Technical Community</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION (TOP 4 ARCHITECTURAL SHOWCASE) -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="projects-header-controls">
+          <div class="section-header" style="margin-bottom: 0;">
+            <div class="section-indicator">[ 01 // SELECTED WORKS ]</div>
+            <h2 class="section-title">Core Systems & Engineering Projects</h2>
+            <p class="section-desc">Selected implementations highlighting multi-agent orchestration, asynchronous event loops, and containerized cloud services.</p>
+          </div>
+
+          <!-- Category Filter Bar -->
+          <div class="project-filter-bar">
+            <button class="filter-btn active" data-filter="all">All (4)</button>
+            <button class="filter-btn" data-filter="ai">AI & Agents</button>
+            <button class="filter-btn" data-filter="cloud">Cloud & Distributed</button>
+            <button class="filter-btn" data-filter="smartcity">Spatial & Systems</button>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 01: NEXUS -->
+          <article class="project-card" data-category="ai smartcity">
+            <div class="project-badge-top">
+              <span class="project-index">01 / REVOLUTIONARY PLATFORM</span>
+              <span class="project-status"><span class="status-dot"></span>Production Code</span>
+            </div>
+
+            <!-- Visual Flow / Architecture Blueprint -->
+            <div class="project-visual">
+              <div class="blueprint-grid"></div>
+              <div class="project-diagram-preview">
+                <div class="diagram-node-flow">
+                  <div class="diagram-node">3D GIS Viewport</div>
+                  <span class="diagram-arrow">⇄</span>
+                  <div class="diagram-node active-pulse">Physics Engine</div>
+                  <span class="diagram-arrow">⇄</span>
+                  <div class="diagram-node">Groq + Gemini</div>
+                </div>
+                <div class="diagram-caption">Sub-200ms Voice Copilot • Real-Time Spatial Telemetry</div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Nexus</h3>
+              <div class="project-tagline">Autonomous Logistics & Spatial Intelligence Platform</div>
+              <p class="project-description">
+                Autonomous spatial intelligence system featuring real-time 3D GIS rendering, deterministic What-If simulation physics for fleet bottleneck prevention, a tactical voice copilot, and a high-speed dual-engine AI pipeline (Groq LLaMA 3.3 + Gemini failover).
+              </p>
+
+              <div class="project-metrics-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <span>Sub-200ms voice copilot latency with Groq LLaMA 3.3</span>
+              </div>
+
+              <div class="project-tags">
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">3D GIS</span>
+                <span class="tech-tag">Groq LLaMA 3.3</span>
+                <span class="tech-tag">Gemini 1.5</span>
+                <span class="tech-tag">Physics Engine</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="project-inspect-btn" data-project="nexus">
+                  <span>Inspect Architecture</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <div class="project-links">
+                  <a href="https://github.com/AadityaUniyal/Nexus" target="_blank" rel="noopener noreferrer" class="icon-btn" title="View Source on GitHub">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: QUORUM -->
+          <article class="project-card" data-category="ai cloud">
+            <div class="project-badge-top">
+              <span class="project-index">02 / DISTRIBUTED PIPELINE</span>
+              <span class="project-status"><span class="status-dot"></span>Microservices</span>
+            </div>
+
+            <div class="project-visual">
+              <div class="blueprint-grid"></div>
+              <div class="project-diagram-preview">
+                <div class="diagram-node-flow">
+                  <div class="diagram-node">PDF Ingest</div>
+                  <span class="diagram-arrow">→</span>
+                  <div class="diagram-node active-pulse">RabbitMQ Queue</div>
+                  <span class="diagram-arrow">→</span>
+                  <div class="diagram-node">ChromaDB RAG</div>
+                </div>
+                <div class="diagram-caption">Asynchronous Event Workers • Real-time SSE Stream</div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Quorum</h3>
+              <div class="project-tagline">Distributed Document Intelligence & Agentic RAG Platform</div>
+              <p class="project-description">
+                Engineered a full-stack document platform that decouples intensive OCR and document extraction into asynchronous RabbitMQ workers. Integrated ChromaDB vector search, Redis caching, human-in-the-loop audit routing, and real-time Server-Sent Events (SSE).
+              </p>
+
+              <div class="project-metrics-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <span>Zero thread blockage with message queue worker decoupling</span>
+              </div>
+
+              <div class="project-tags">
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">RabbitMQ</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">ChromaDB</span>
+                <span class="tech-tag">Redis</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="project-inspect-btn" data-project="quorum">
+                  <span>Inspect Architecture</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <div class="project-links">
+                  <a href="https://github.com/AadityaUniyal" target="_blank" rel="noopener noreferrer" class="icon-btn" title="View Source on GitHub">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: MINI-AWS / MINICLOUD -->
+          <article class="project-card" data-category="cloud">
+            <div class="project-badge-top">
+              <span class="project-index">03 / CLOUD INFRASTRUCTURE</span>
+              <span class="project-status"><span class="status-dot"></span>Self-Hosted Engine</span>
+            </div>
+
+            <div class="project-visual">
+              <div class="blueprint-grid"></div>
+              <div class="project-diagram-preview">
+                <div class="diagram-node-flow">
+                  <div class="diagram-node">Spring Boot IAM</div>
+                  <span class="diagram-arrow">⇄</span>
+                  <div class="diagram-node active-pulse">Docker Lambda</div>
+                  <span class="diagram-arrow">⇄</span>
+                  <div class="diagram-node">S3 Event Engine</div>
+                </div>
+                <div class="diagram-caption">Containerized Serverless • Fault-Tolerant Instance Daemon</div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">Mini-AWS (MiniCloud)</h3>
+              <div class="project-tagline">Self-Hosted Cloud Infrastructure & Serverless Platform</div>
+              <p class="project-description">
+                A production-grade, self-hosted simulation of Amazon Web Services (AWS) built in Java and Spring Boot. Features custom IAM access control, an isolated Docker-based AWS Lambda container runner triggered from S3 events, and automated instance recovery.
+              </p>
+
+              <div class="project-metrics-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <span>Automated container isolation & S3 event triggers</span>
+              </div>
+
+              <div class="project-tags">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">Docker Engine API</span>
+                <span class="tech-tag">IAM Security</span>
+                <span class="tech-tag">GitHub Actions</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="project-inspect-btn" data-project="miniaws">
+                  <span>Inspect Architecture</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <div class="project-links">
+                  <a href="https://github.com/AadityaUniyal/Mini-AWS" target="_blank" rel="noopener noreferrer" class="icon-btn" title="View Source on GitHub">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 04: LOCALLENS -->
+          <article class="project-card" data-category="ai smartcity">
+            <div class="project-badge-top">
+              <span class="project-index">04 / CIVIC INFRASTRUCTURE</span>
+              <span class="project-status"><span class="status-dot"></span>Computer Vision</span>
+            </div>
+
+            <div class="project-visual">
+              <div class="blueprint-grid"></div>
+              <div class="project-diagram-preview">
+                <div class="diagram-node-flow">
+                  <div class="diagram-node">Camera Stream</div>
+                  <span class="diagram-arrow">→</span>
+                  <div class="diagram-node active-pulse">Traffic AI Model</div>
+                  <span class="diagram-arrow">→</span>
+                  <div class="diagram-node">Dispatch Engine</div>
+                </div>
+                <div class="diagram-caption">Vision Congestion Analytics • Emergency Blood Proximity Match</div>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <h3 class="project-title">LocalLens</h3>
+              <div class="project-tagline">AI-Powered Smart City Infrastructure & Emergency Network</div>
+              <p class="project-description">
+                Smart city platform designed to streamline emergency response and citizen services through AI-driven traffic management, real-time spatial blood donation matching, and an automated government grievance resolution pipeline.
+              </p>
+
+              <div class="project-metrics-chip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <span>Dynamic geospatial radius dispatch for urgent medical requests</span>
+              </div>
+
+              <div class="project-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">Spatial Routing</span>
+                <span class="tech-tag">Civic APIs</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="project-inspect-btn" data-project="locallens">
+                  <span>Inspect Architecture</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <div class="project-links">
+                  <a href="https://github.com/AadityaUniyal/LocalLens" target="_blank" rel="noopener noreferrer" class="icon-btn" title="View Source on GitHub">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Secondary Projects Highlight Box -->
+        <div class="secondary-projects-box">
+          <span class="project-status">Additional Implementations</span>
+          <h4 style="font-family: var(--font-display); font-size: 1.25rem; margin-top: 0.5rem; color: var(--text-primary);">Extended Machine Learning & Vision Systems</h4>
+          <div class="more-projects-grid">
+            <div class="compact-project-card">
+              <h5 style="color: var(--accent-cyan); font-size: 1.05rem; margin-bottom: 0.35rem;">Darkstori — Geospatial Demand Forecasting</h5>
+              <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.75rem;">
+                FastAPI backend ranking candidate retail stores using competitor density and XGBoost demand forecasting, achieving <strong>85%+ accuracy</strong> on test data with Redis-cached location jobs.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">Python • FastAPI • PostgreSQL • Redis • XGBoost</div>
+            </div>
+            <div class="compact-project-card">
+              <h5 style="color: var(--accent-cyan); font-size: 1.05rem; margin-bottom: 0.35rem;">Fitness_Smarty — Hybrid Nutrition Assistant</h5>
+              <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; margin-bottom: 0.75rem;">
+                Hybrid computer vision assistant combining Gemini 1.5 Flash and YOLOv8 for accurate real-time food ingredient segmentation, caloric estimation, and automated nutritional breakdown.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">Python • Gemini 1.5 Flash • YOLOv8 • Streamlit</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INDUSTRY EXPERIENCE SECTION (CENLUB SYSTEMS) -->
+    <section class="section" id="experience" style="background: rgba(15, 17, 24, 0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-indicator">[ 02 // PROFESSIONAL EXPERIENCE ]</div>
+          <h2 class="section-title">Industry AI Engineering</h2>
+          <p class="section-desc">Building autonomous multi-agent systems and mission-critical production pipelines in industrial environments.</p>
+        </div>
+
+        <div class="experience-container">
+          <div class="experience-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role-title">AI Engineering Intern</h3>
+                <div class="exp-company">Cenlub Systems</div>
+              </div>
+              <div class="exp-date-pill">May 2026 – Jul 2026</div>
+            </div>
+
+            <ul class="exp-bullet-list">
+              <li class="exp-bullet-item">
+                Co-developed an <strong>agentic, multi-agent LLM pipeline</strong> in Python that automated the conversion of 50+ monthly complex engineering RFQ PDFs into structured Annexure-I sheets, <strong>slashing manual specification processing time by 70%</strong>.
+              </li>
+              <li class="exp-bullet-item">
+                Architected and implemented a specialized <strong>auditor agent</strong> that validates extracted RFQ fields against stringent engineering specifications before database ingestion, reducing manual verification effort by 40% and eliminating dirty data propagation.
+              </li>
+              <li class="exp-bullet-item">
+                Engineered custom semantic chunking algorithms and prompt chain evaluators to ensure zero hallucinations in high-consequence engineering tolerance metrics.
+              </li>
+            </ul>
+
+            <div class="exp-arch-callout">
+              <div>
+                <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.2rem;">Pipeline Velocity & Reliability Metric</div>
+                <div class="exp-callout-text">Automated 50+ monthly engineering dossiers with dual validation passes</div>
+              </div>
+              <div class="exp-callout-stat">70% Faster</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEETCODE & COMPETITIVE ALGORITHMS SECTION -->
+    <section class="section" id="leetcode">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-indicator">[ 03 // ALGORITHMIC RIGOR ]</div>
+          <h2 class="section-title">Data Structures & Competitive Problem Solving</h2>
+          <p class="section-desc">Demonstrated algorithmic foundation across complex graphs, dynamic programming, and low-latency systems.</p>
+        </div>
+
+        <div class="leetcode-section-card">
+          <div class="leetcode-header">
+            <div class="leetcode-title-group">
+              <div class="leetcode-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.874 5.874 0 0 0 .349 1.017 5.938 5.938 0 0 0 4.818 3.662 5.895 5.895 0 0 0 3.343-.934l3.03-2.13a1.36 1.36 0 0 0 .223-1.916 1.372 1.372 0 0 0-1.924-.228l-3.03 2.13a3.178 3.178 0 0 1-1.802.503 3.208 3.208 0 0 1-2.6-1.974 3.174 3.174 0 0 1-.188-.55 3.018 3.018 0 0 1-.034-1.281 2.87 2.87 0 0 1 .658-1.144L8.85 8.412l4.633-4.966a1.363 1.363 0 0 0 0-1.933 1.354 1.354 0 0 0-.96-.407zM16.97 7.07a1.36 1.36 0 0 0-.96.402l-4.545 4.872a1.364 1.364 0 0 0 .005 1.933 1.362 1.362 0 0 0 1.93-.005l4.545-4.872a1.364 1.364 0 0 0-.96-2.33h-.015zM22.25 10.667h-6.848a1.36 1.36 0 1 0 0 2.72h6.848a1.36 1.36 0 1 0 0-2.72z"/></svg>
+              </div>
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--text-primary);">LeetCode Profile: @Aaditya_Cheeks</h3>
+                <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">Consistency in Distributed Problem Solving</div>
+              </div>
+            </div>
+
+            <a href="https://leetcode.com/u/Aaditya_Cheeks/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.825rem;">
+              <span>View LeetCode Profile</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          <div class="leetcode-stats-row">
+            <div class="lc-stat-box total">
+              <div class="lc-val">500+</div>
+              <div class="lc-label">Total Solved</div>
+            </div>
+            <div class="lc-stat-box easy">
+              <div class="lc-val">150+</div>
+              <div class="lc-label">Easy (Fundamentals)</div>
+            </div>
+            <div class="lc-stat-box medium">
+              <div class="lc-val">300+</div>
+              <div class="lc-label">Medium (Graphs / DP)</div>
+            </div>
+            <div class="lc-stat-box hard">
+              <div class="lc-val">50+</div>
+              <div class="lc-label">Hard (Optimization)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL ARSENAL / SKILLS MATRIX -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-indicator">[ 04 // TECHNICAL ARSENAL ]</div>
+          <h2 class="section-title">Core Competencies & Stack</h2>
+          <p class="section-desc">Tools, frameworks, and system architectures leveraged across production and distributed environments.</p>
+        </div>
+
+        <div class="skills-category-grid">
+          
+          <!-- Category 1 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="cat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3 class="cat-title">Languages</h3>
+            </div>
+            <div class="skill-badges-container">
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">C</span>
+              <span class="skill-pill">JavaScript</span>
+              <span class="skill-pill">TypeScript</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">HTML / CSS</span>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="cat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
+              </div>
+              <h3 class="cat-title">AI & LLM Systems</h3>
+            </div>
+            <div class="skill-badges-container">
+              <span class="skill-pill">Multi-Agent AI</span>
+              <span class="skill-pill">Retrieval-Augmented Gen (RAG)</span>
+              <span class="skill-pill">Vector Search</span>
+              <span class="skill-pill">ChromaDB</span>
+              <span class="skill-pill">Semantic Chunking</span>
+              <span class="skill-pill">Prompt Engineering</span>
+              <span class="skill-pill">Auditor Agents</span>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="cat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </div>
+              <h3 class="cat-title">Backend & Cloud</h3>
+            </div>
+            <div class="skill-badges-container">
+              <span class="skill-pill">Spring Boot</span>
+              <span class="skill-pill">FastAPI</span>
+              <span class="skill-pill">RabbitMQ</span>
+              <span class="skill-pill">Docker Containers</span>
+              <span class="skill-pill">Microservices</span>
+              <span class="skill-pill">Server-Sent Events (SSE)</span>
+              <span class="skill-pill">RESTful APIs</span>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="cat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <h3 class="cat-title">Databases & Storage</h3>
+            </div>
+            <div class="skill-badges-container">
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">Redis (Cache & Queues)</span>
+              <span class="skill-pill">MongoDB</span>
+              <span class="skill-pill">ChromaDB (Vector DB)</span>
+              <span class="skill-pill">S3 Object Storage</span>
+            </div>
+          </div>
+
+          <!-- Category 5 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="cat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h3 class="cat-title">Frontend & UI</h3>
+            </div>
+            <div class="skill-badges-container">
+              <span class="skill-pill">Next.js</span>
+              <span class="skill-pill">React</span>
+              <span class="skill-pill">Tailwind CSS</span>
+              <span class="skill-pill">3D GIS (Deck.gl / MapLibre)</span>
+              <span class="skill-pill">Interactive Canvas</span>
+            </div>
+          </div>
+
+          <!-- Category 6 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="cat-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <h3 class="cat-title">DevOps & Tooling</h3>
+            </div>
+            <div class="skill-badges-container">
+              <span class="skill-pill">Git & GitHub</span>
+              <span class="skill-pill">GitHub Actions CI/CD</span>
+              <span class="skill-pill">Maven</span>
+              <span class="skill-pill">Unit & Integration Tests</span>
+              <span class="skill-pill">Linux Systems</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & LEADERSHIP SECTION (STRICTLY NO SCORES AS REQUESTED) -->
+    <section class="section" id="education" style="background: rgba(15, 17, 24, 0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-indicator">[ 05 // ACADEMICS & COMMUNITY ]</div>
+          <h2 class="section-title">Education & Campus Leadership</h2>
+          <p class="section-desc">Academic institutional background paired with active student developer stewardship.</p>
+        </div>
+
+        <div class="edu-grid">
+          <!-- University Degree Card (Strictly without scores/percentages!) -->
+          <div class="edu-card">
+            <h3 class="edu-university">Graphic Era Deemed to be University</h3>
+            <div class="edu-degree">Bachelor of Technology in Computer Science Engineering (B.Tech CSE)</div>
+            <div class="edu-meta">
+              <span>📅 Aug 2024 – Jun 2028</span>
+              <span>📍 Dehradun, India</span>
+            </div>
+            <p class="edu-desc">
+              Focusing on Object-Oriented Programming (OOP), Distributed Computing Systems, Data Structures & Algorithms, Database Management Systems, and Modern Applied Artificial Intelligence.
+            </p>
+          </div>
+
+          <!-- GDG Leadership Card -->
+          <div class="gdg-badge-card">
+            <div class="gdg-pill">Campus Leadership</div>
+            <h4 class="gdg-title">Google Developer Groups (GDG) Lead</h4>
+            <div style="font-family: var(--font-mono); font-size: 0.825rem; color: var(--accent-cyan); margin-bottom: 0.75rem;">Graphic Era Campus Chapter</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+              Spearheading developer community initiatives, organizing hands-on technical workshops, competitive hackathons, and fostering cross-domain engineering collaboration among student builders.
+            </p>
+          </div>
+        </div>
+
+        <!-- Certifications & Recognitions Grid -->
+        <div style="margin-top: 2.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+          <div class="compact-project-card">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-cyan); margin-bottom: 0.25rem;">ORACLE ACCREDITATION</div>
+            <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem; margin-bottom: 0.25rem;">Oracle AI Vector Search Professional</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">High-dimensional vector embeddings & semantic retrieval</div>
+          </div>
+          <div class="compact-project-card">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-cyan); margin-bottom: 0.25rem;">MICROSOFT CERTIFICATION</div>
+            <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem; margin-bottom: 0.25rem;">Microsoft Certified: Fabric Data Engineer</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">Enterprise lakehouse, data pipelines & cloud transformations</div>
+          </div>
+          <div class="compact-project-card">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-cyan); margin-bottom: 0.25rem;">FELLOWSHIP SELECTION</div>
+            <div style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem; margin-bottom: 0.25rem;">McKinsey & Company Program 2026</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">Selected for McKinsey Take a Step Forward leadership network</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTERACTIVE DEVELOPER CONSOLE -->
+    <section class="section" id="terminal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-indicator">[ 06 // SYSTEM TERMINAL ]</div>
+          <h2 class="section-title">Interactive Engineering Console</h2>
+          <p class="section-desc">Direct terminal access to verify candidate architecture logs, projects, and contact channels.</p>
+        </div>
+
+        <div class="terminal-window">
+          <div class="terminal-titlebar">
+            <div class="terminal-dots">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+            </div>
+            <div class="terminal-label">aaditya@uniyal-system: ~/portfolio (bash)</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">v2.4.0</div>
+          </div>
+
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-output-line cyan">=== AADITYA UNIYAL PORTFOLIO CONSOLE INITIALIZED ===</div>
+            <div class="terminal-output-line">Type <span class="cyan">'help'</span> to view available terminal commands, or use the quick buttons below.</div>
+          </div>
+
+          <div class="terminal-prompt-row" style="padding: 0 1.5rem 1rem;">
+            <span class="terminal-prompt-symbol">aaditya@portfolio:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input" placeholder="type a command (e.g. 'projects', 'skills', 'experience', 'contact')..." autocomplete="off" spellcheck="false">
+          </div>
+
+          <div class="terminal-quick-pills">
+            <span style="font-size: 0.725rem; color: var(--text-muted); font-family: var(--font-mono); margin-right: 0.25rem;">Quick Run:</span>
+            <button class="term-quick-btn" data-cmd="projects">projects</button>
+            <button class="term-quick-btn" data-cmd="experience">experience</button>
+            <button class="term-quick-btn" data-cmd="skills">skills</button>
+            <button class="term-quick-btn" data-cmd="leetcode">leetcode</button>
+            <button class="term-quick-btn" data-cmd="education">education</button>
+            <button class="term-quick-btn" data-cmd="sudo hire">sudo hire</button>
+            <button class="term-quick-btn" data-cmd="clear">clear</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONNECT / CONTACT SECTION -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="section-indicator" style="justify-content: center;">[ 07 // GET IN TOUCH ]</div>
+          <h2 style="font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 800; color: var(--text-primary); margin-bottom: 0.75rem;">
+            Let's Build Systems That Matter.
+          </h2>
+          <p style="color: var(--text-secondary); max-width: 600px; margin-inline: auto; font-size: 1.05rem;">
+            I am currently open to <strong>AI Engineering & Software Development Engineer (SDE)</strong> internships, technical collaborations, and ambitious systems engineering initiatives.
+          </p>
+
+          <div class="contact-email-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-cyan);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span class="email-address">aaditya.uniyal22@gmail.com</span>
+            <button class="copy-pill-btn" id="copy-email-btn" title="Copy to clipboard">Copy Email</button>
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+            <a href="mailto:aaditya.uniyal22@gmail.com" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Send Direct Email</span>
+            </a>
+            <a href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <span>Connect on LinkedIn</span>
+            </a>
+            <a href="https://github.com/AadityaUniyal" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <span>Inspect GitHub Repos</span>
+            </a>
+          </div>
+
+          <div style="margin-top: 2rem; font-family: var(--font-mono); font-size: 0.825rem; color: var(--text-muted);">
+            📞 Phone: +91 7217347790 &nbsp;•&nbsp; 📍 Dehradun, India
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Aaditya Uniyal</div>
+          <p style="color: var(--text-muted); font-size: 0.875rem; max-width: 320px; line-height: 1.6;">
+            AI Systems Engineer & Distributed Systems Builder. Crafting resilient architectures from Dehradun, India to the world.
+          </p>
+        </div>
+
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.775rem; color: var(--accent-cyan); text-transform: uppercase; margin-bottom: 0.75rem;">Navigation</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem;">
+            <li><a href="#projects" style="color: var(--text-secondary); text-decoration: none;">Selected Works</a></li>
+            <li><a href="#experience" style="color: var(--text-secondary); text-decoration: none;">Cenlub Systems Internship</a></li>
+            <li><a href="#skills" style="color: var(--text-secondary); text-decoration: none;">Technical Arsenal</a></li>
+            <li><a href="#leetcode" style="color: var(--text-secondary); text-decoration: none;">LeetCode 500+</a></li>
+            <li><a href="#terminal" style="color: var(--text-secondary); text-decoration: none;">Interactive Terminal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.775rem; color: var(--accent-cyan); text-transform: uppercase; margin-bottom: 0.75rem;">External Profiles</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem;">
+            <li><a href="https://github.com/AadityaUniyal" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none;">GitHub / AadityaUniyal</a></li>
+            <li><a href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none;">LinkedIn / aaditya-uniyal</a></li>
+            <li><a href="https://leetcode.com/u/Aaditya_Cheeks/" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); text-decoration: none;">LeetCode / @Aaditya_Cheeks</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        <div>© 2026 Aaditya Uniyal. Strictly crafted for high-performance engineering evaluation.</div>
+        <div>Graphic Era Deemed to be University, B.Tech CSE</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SYSTEM ARCHITECTURE DEEP-DIVE MODAL -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.35rem;">Architectural Deep Dive</div>
+          <h3 id="modal-title" style="font-family: var(--font-display); font-size: 1.5rem; color: var(--text-primary); font-weight: 700;">Project Title</h3>
+          <div id="modal-subtitle" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan);">Subtitle</div>
+        </div>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">×</button>
+      </div>
+
+      <div class="modal-body">
+        <h4 style="font-family: var(--font-mono); font-size: 0.8rem; color: #ef4743; text-transform: uppercase; margin-bottom: 0.35rem;">[ 01 // The Engineering Problem ]</h4>
+        <p id="modal-problem" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;"></p>
+
+        <h4 style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-emerald); text-transform: uppercase; margin-bottom: 0.35rem;">[ 02 // Architectural Solution ]</h4>
+        <p id="modal-solution" style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;"></p>
+
+        <h4 style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); text-transform: uppercase; margin-bottom: 0.35rem;">[ 03 // Data Flow & Topology Blueprint ]</h4>
+        <pre class="arch-flow-diagram" id="modal-arch"></pre>
+
+        <h4 style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-purple); text-transform: uppercase; margin-bottom: 0.5rem;">[ 04 // Benchmark Highlights & Impact ]</h4>
+        <ul id="modal-highlights" class="exp-bullet-list" style="margin-bottom: 2rem;"></ul>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <span>Explore Code on GitHub</span>
+          </a>
+          <a id="modal-demo-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <span>Live Project Link</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMAND PALETTE (CTRL + K / CMD + K) -->
+  <div class="cmd-palette-backdrop" id="cmd-palette" aria-hidden="true">
+    <div class="cmd-palette-box">
+      <div class="cmd-search-input-wrap">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-cyan);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="cmd-input" class="cmd-input" placeholder="Type a destination or command..." autocomplete="off">
+        <span class="cmd-key" style="font-size: 0.7rem;">ESC to exit</span>
+      </div>
+      <ul class="cmd-list" id="cmd-list">
+        <li class="cmd-item" data-action="#projects">
+          <span>Go to: Selected Projects</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);">#projects</span>
+        </li>
+        <li class="cmd-item" data-action="#experience">
+          <span>Go to: Cenlub AI Internship</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);">#experience</span>
+        </li>
+        <li class="cmd-item" data-action="#leetcode">
+          <span>Go to: LeetCode Stats (500+ Solved)</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);">#leetcode</span>
+        </li>
+        <li class="cmd-item" data-action="#skills">
+          <span>Go to: Technical Arsenal</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);">#skills</span>
+        </li>
+        <li class="cmd-item" data-action="#education">
+          <span>Go to: Graphic Era Education</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);">#education</span>
+        </li>
+        <li class="cmd-item" data-action="#terminal">
+          <span>Go to: System Console</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);">#terminal</span>
+        </li>
+        <li class="cmd-item" data-action="project-nexus">
+          <span>Inspect Architecture: Nexus (3D GIS + Dual LLM)</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-cyan);">modal</span>
+        </li>
+        <li class="cmd-item" data-action="project-quorum">
+          <span>Inspect Architecture: Quorum (FastAPI + RabbitMQ)</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-cyan);">modal</span>
+        </li>
+        <li class="cmd-item" data-action="project-miniaws">
+          <span>Inspect Architecture: Mini-AWS (Spring Boot Cloud)</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-cyan);">modal</span>
+        </li>
+        <li class="cmd-item" data-action="project-locallens">
+          <span>Inspect Architecture: LocalLens (Vision Traffic)</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-cyan);">modal</span>
+        </li>
+        <li class="cmd-item" data-action="copy-email">
+          <span>Action: Copy Email (aaditya.uniyal22@gmail.com)</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-emerald);">clipboard</span>
+        </li>
+        <li class="cmd-item" data-action="github">
+          <span>External: Open GitHub Profile</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);">github.com</span>
+        </li>
+        <li class="cmd-item" data-action="linkedin">
+          <span>External: Open LinkedIn Profile</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);">linkedin.com</span>
+        </li>
+        <li class="cmd-item" data-action="leetcode">
+          <span>External: Open LeetCode Profile</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);">leetcode.com</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notice" id="toast-notice">✓ Action completed!</div>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/audio.js"></script>
+  <script src="assets/js/cursor.js"></script>
+  <script src="assets/js/terminal.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
