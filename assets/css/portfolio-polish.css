@@ -97,6 +97,7 @@ body::selection { color: #101210; background: #9ed4c3; }
 .credential-card { display: flex; flex-direction: column; gap: 0.45rem; min-height: 100px; padding: 1rem 1.1rem; border: 1px solid var(--border-subtle); border-radius: 12px; background: rgba(255,255,255,0.025); }
 .credential-card strong { color: #f0efe8; font-size: 0.9rem; line-height: 1.4; }
 .credential-card span { color: var(--text-muted); font-size: 0.75rem; }
+.credential-card .credential-kind { margin-top: 0; color: var(--accent-emerald); font: 600 .58rem var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
 .credential-link { color: inherit; text-decoration: none; transition: border-color .2s, transform .2s, background .2s; }
 .credential-link:hover, .credential-link:focus-visible { border-color: var(--accent-cyan); background: rgba(255,255,255,.045); transform: translateY(-3px); outline: none; }
 .credential-link small { margin-top: auto; color: var(--accent-cyan); font: 600 .67rem var(--font-mono); letter-spacing: .03em; }
