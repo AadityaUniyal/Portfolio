@@ -21,25 +21,12 @@
   };
   const sceneName = document.getElementById('world-hud-name');
   const sceneCount = document.getElementById('world-hud-count');
-  const scenePortal = document.getElementById('scene-portal');
-  const scenePortalLabel = document.getElementById('scene-portal-label');
   const sceneLinks = [...document.querySelectorAll('.world-rail a')];
-  let portalTimer;
   const activateScene = (section) => {
     const index = sceneSections.indexOf(section);
     if (index < 0) return;
-    const nextScene = section.dataset.scene;
-    const changed = root.dataset.scene && root.dataset.scene !== nextScene;
     root.dataset.scene = section.dataset.scene;
     section.classList.add('scene-entered');
-    if (changed && scenePortal) {
-      if (scenePortalLabel) scenePortalLabel.textContent = sceneNames[nextScene] || nextScene.toUpperCase();
-      scenePortal.classList.remove('is-shifting');
-      void scenePortal.offsetWidth;
-      scenePortal.classList.add('is-shifting');
-      window.clearTimeout(portalTimer);
-      portalTimer = window.setTimeout(() => scenePortal.classList.remove('is-shifting'), 700);
-    }
     if (sceneName) sceneName.textContent = sceneNames[section.dataset.scene] || section.dataset.scene.toUpperCase();
     if (sceneCount) sceneCount.textContent = `${String(index + 1).padStart(2, '0')} / ${String(sceneSections.length).padStart(2, '0')}`;
     sceneLinks.forEach((link) => {
@@ -70,9 +57,23 @@
         root.style.setProperty('--pointer-y', `${(y * 100).toFixed(1)}%`);
         root.style.setProperty('--grid-x', `${((x - .5) * -12).toFixed(1)}px`);
         root.style.setProperty('--grid-y', `${((y - .5) * -12).toFixed(1)}px`);
+        const heroStage = document.querySelector('.hero-image-wrapper');
+        const constellation = document.querySelector('.hero-constellation');
+        if (heroStage && constellation) {
+          const bounds = heroStage.getBoundingClientRect();
+          const localX = Math.max(0, Math.min(1, (event.clientX - bounds.left) / bounds.width));
+          const localY = Math.max(0, Math.min(1, (event.clientY - bounds.top) / bounds.height));
+          constellation.style.setProperty('--constellation-tilt-x', `${((localX - .5) * 12).toFixed(1)}deg`);
+          constellation.style.setProperty('--constellation-tilt-y', `${((.5 - localY) * 10).toFixed(1)}deg`);
+        }
         pointerFrame = 0;
       });
     }, { passive: true });
+    const constellation = document.querySelector('.hero-constellation');
+    if (constellation) constellation.parentElement.addEventListener('pointerleave', () => {
+      constellation.style.setProperty('--constellation-tilt-x', '0deg');
+      constellation.style.setProperty('--constellation-tilt-y', '0deg');
+    });
   }
 
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;

@@ -373,14 +373,14 @@
       finished = true;
       intro.classList.add('is-done');
       document.documentElement.classList.add('intro-finished');
-      window.setTimeout(() => intro.remove(), 800);
+      window.setTimeout(() => intro.remove(), 1050);
     };
 
     if (skip) skip.addEventListener('click', finish);
     window.addEventListener('keydown', (event) => {
       if (event.key === 'Escape' && !finished) finish();
     }, { once: true });
-    window.setTimeout(finish, 4100);
+    window.setTimeout(finish, 3100);
   }
 
   document.addEventListener('DOMContentLoaded', () => {
