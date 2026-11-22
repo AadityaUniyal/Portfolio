@@ -12,8 +12,8 @@
     <header><div class="case-kicker">${data.index} / Project case study</div><h1>${data.title}</h1><p class="case-deck">${data.tagline}</p><p class="case-deck">${data.description}</p>
       <div class="case-links"><a class="btn btn-secondary" href="${data.github}" target="_blank" rel="noopener">View source on GitHub ↗</a>${demo}</div><div class="case-tags">${tags}</div></header>
     <div class="case-architecture"><div class="case-kicker">System flow</div><p>${data.architecture}</p></div>
-    <section class="case-block"><h2>The problem</h2><p>${data.problem}</p></section>
-    <section class="case-block"><h2>What I built</h2><p>${data.solution}</p></section>
-    <section class="case-block"><h2>Engineering takeaway</h2><p>${data.impact}</p></section>
+    <section class="case-block"><h2>The problem I chose to work on</h2><p>${data.problem}</p></section>
+    <section class="case-block"><h2>How I approached it</h2><p>${data.solution}</p></section>
+    <section class="case-block"><h2>What this design makes possible</h2><p>${data.impact}</p></section>
     <footer class="case-block"><a class="case-back" href="../index.html#projects">Back to selected work ↗</a></footer>`;
 })();

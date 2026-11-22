@@ -1,0 +1,22 @@
+.about-page { width:min(100% - 2.5rem,1120px); margin:auto; padding-top:clamp(8rem,14vw,12rem); }
+.about-hero { padding-bottom:clamp(5rem,11vw,9rem); }
+.about-kicker,.about-label { color:var(--world-accent); font:500 .72rem var(--font-mono); letter-spacing:.12em; text-transform:uppercase; }
+.about-hero h1 { max-width:980px; margin:1.2rem 0 1.5rem; font:700 clamp(3.3rem,9vw,7.6rem)/.98 var(--font-display); letter-spacing:-.075em; }
+.about-lede { max-width:720px; color:var(--text-secondary); font-size:clamp(1.1rem,2vw,1.35rem); line-height:1.8; }
+.about-actions { display:flex; gap:.8rem; flex-wrap:wrap; margin-top:2rem; }
+.about-story,.about-facts { display:grid; grid-template-columns:minmax(160px,.65fr) minmax(0,1.35fr); gap:clamp(2rem,8vw,8rem); padding:clamp(3rem,7vw,6rem) 0; border-top:1px solid var(--border-subtle); }
+.about-story h2,.about-facts h2 { max-width:760px; margin:-.5rem 0 1.4rem; font:600 clamp(2rem,4.6vw,3.9rem)/1.08 var(--font-display); letter-spacing:-.055em; }
+.about-story p { max-width:740px; color:var(--text-secondary); line-height:1.9; font-size:1.02rem; }
+.about-story p+p { margin-top:1rem; }
+.about-interests { padding:clamp(3rem,7vw,6rem) 0; border-top:1px solid var(--border-subtle); }
+.interest-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2rem; }
+.interest-grid article { min-height:230px; padding:1.5rem; border:1px solid var(--border-subtle); border-radius:16px; background:rgba(255,255,255,.025); }
+.interest-grid article>span,.fact-list article>span { color:var(--world-accent); font:.68rem var(--font-mono); letter-spacing:.08em; }
+.interest-grid h3 { margin:2.5rem 0 .6rem; font:600 1.25rem var(--font-display); }
+.interest-grid p,.fact-list p { color:var(--text-secondary); font-size:.94rem; line-height:1.75; }
+.fact-list article { padding:1rem 0 1.3rem; border-top:1px solid var(--border-subtle); }
+.fact-list p { margin-top:.45rem; }
+.about-close { padding:clamp(4rem,9vw,8rem) 1.5rem; border-top:1px solid var(--border-subtle); text-align:center; }
+.about-close h2 { max-width:760px; margin:1rem auto 1.8rem; font:600 clamp(2rem,5vw,4.4rem)/1.06 var(--font-display); letter-spacing:-.06em; }
+.about-page+.site-footer a { color:var(--text-secondary); text-decoration:none; }
+@media(max-width:720px) { .about-story,.about-facts { grid-template-columns:1fr; gap:1.6rem; } .interest-grid { grid-template-columns:1fr; } .interest-grid article { min-height:180px; } .interest-grid h3 { margin-top:1.5rem; } }
