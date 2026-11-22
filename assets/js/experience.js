@@ -58,21 +58,21 @@
         root.style.setProperty('--grid-x', `${((x - .5) * -12).toFixed(1)}px`);
         root.style.setProperty('--grid-y', `${((y - .5) * -12).toFixed(1)}px`);
         const heroStage = document.querySelector('.hero-image-wrapper');
-        const constellation = document.querySelector('.hero-constellation');
-        if (heroStage && constellation) {
+        const sculpture = document.querySelector('.hero-sculpture-scene');
+        if (heroStage && sculpture) {
           const bounds = heroStage.getBoundingClientRect();
           const localX = Math.max(0, Math.min(1, (event.clientX - bounds.left) / bounds.width));
           const localY = Math.max(0, Math.min(1, (event.clientY - bounds.top) / bounds.height));
-          constellation.style.setProperty('--constellation-tilt-x', `${((localX - .5) * 12).toFixed(1)}deg`);
-          constellation.style.setProperty('--constellation-tilt-y', `${((.5 - localY) * 10).toFixed(1)}deg`);
+          sculpture.style.setProperty('--sculpture-tilt-x', `${((localX - .5) * 7).toFixed(1)}deg`);
+          sculpture.style.setProperty('--sculpture-tilt-y', `${((.5 - localY) * 5).toFixed(1)}deg`);
         }
         pointerFrame = 0;
       });
     }, { passive: true });
-    const constellation = document.querySelector('.hero-constellation');
-    if (constellation) constellation.parentElement.addEventListener('pointerleave', () => {
-      constellation.style.setProperty('--constellation-tilt-x', '0deg');
-      constellation.style.setProperty('--constellation-tilt-y', '0deg');
+    const sculpture = document.querySelector('.hero-sculpture-scene');
+    if (sculpture) sculpture.parentElement.addEventListener('pointerleave', () => {
+      sculpture.style.setProperty('--sculpture-tilt-x', '0deg');
+      sculpture.style.setProperty('--sculpture-tilt-y', '0deg');
     });
   }
 
