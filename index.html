@@ -557,7 +557,7 @@
               </div>
               <div>
                 <h3 style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--text-primary);">A little time with the fundamentals</h3>
-              <div style="font-family: var(--font-mono); font-size: 0.8rem; color: #ffa116;" id="lc-sync-status">Public profile</div>
+              <div class="lc-sync-status" id="lc-sync-status" role="status" aria-live="polite"><span class="lc-sync-dot"></span>Connecting to live stats</div>
               </div>
             </div>
 
@@ -569,17 +569,15 @@
             </div>
           </div>
 
-          <div class="leetcode-stats-row">
-            <div class="lc-stat-box total">
-              <div class="lc-val">DSA</div>
-              <div class="lc-label">Data structures</div>
-            </div>
-            <div class="lc-stat-box easy"><div class="lc-val">ALG</div><div class="lc-label">Algorithms</div></div>
-            <div class="lc-stat-box medium"><div class="lc-val">C++</div><div class="lc-label">Practice language</div></div>
-            <div class="lc-stat-box hard"><div class="lc-val">↗</div><div class="lc-label">Public profile</div></div>
+          <div class="leetcode-stats-row leetcode-live-stats" aria-label="Live LeetCode solved problem counts">
+            <div class="lc-stat-box total"><div class="lc-val" id="lc-total" data-count="—">—</div><div class="lc-label">Solved</div></div>
+            <div class="lc-stat-box easy"><div class="lc-val" id="lc-easy" data-count="—">—</div><div class="lc-label">Easy</div></div>
+            <div class="lc-stat-box medium"><div class="lc-val" id="lc-medium" data-count="—">—</div><div class="lc-label">Medium</div></div>
+            <div class="lc-stat-box hard"><div class="lc-val" id="lc-hard" data-count="—">—</div><div class="lc-label">Hard</div></div>
+            <div class="lc-stat-box lc-rank"><div class="lc-val" id="lc-rank" data-count="—">—</div><div class="lc-label">Global rank</div></div>
           </div>
-
-          <p class="profile-note">Counts and streaks change over time. The profile link is the current source of truth.</p>
+          <div class="lc-breakdown" aria-hidden="true"><i id="lc-easy-bar"></i><i id="lc-medium-bar"></i><i id="lc-hard-bar"></i></div>
+          <p class="profile-note">Live public profile snapshot · refreshes every 30 minutes. Stats are served by <a href="https://leetcode-api-pied.vercel.app/" target="_blank" rel="noopener noreferrer">LeetCode API</a>; LeetCode remains the source of truth.</p>
 
         </div>
 

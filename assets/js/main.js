@@ -307,6 +307,59 @@
   }
 
   // ═════════════════════════════════════════════════════════════════════════
+  // 8. LIVE LEETCODE PROFILE SNAPSHOT
+  // ═════════════════════════════════════════════════════════════════════════
+  function initLeetCodeStats() {
+    const status = document.getElementById('lc-sync-status');
+    const fields = {
+      total: document.getElementById('lc-total'),
+      easy: document.getElementById('lc-easy'),
+      medium: document.getElementById('lc-medium'),
+      hard: document.getElementById('lc-hard'),
+      rank: document.getElementById('lc-rank')
+    };
+    if (!status || !fields.total) return;
+    const endpoint = 'https://leetcode-api-pied.vercel.app/user/Aaditya_Cheeks';
+    const format = (value) => Number(value).toLocaleString('en-IN');
+    const animateNumber = (el, value) => {
+      if (!Number.isFinite(value)) { el.textContent = '—'; return; }
+      const start = performance.now();
+      const duration = 850;
+      function tick(now) {
+        const progress = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - progress, 4);
+        el.textContent = format(Math.round(value * eased));
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    };
+    const render = (payload) => {
+      const accepted = payload && payload.submitStats && payload.submitStats.acSubmissionNum;
+      if (!Array.isArray(accepted)) throw new Error('Unexpected stats response');
+      const find = (label) => accepted.find((entry) => entry.difficulty === label)?.count;
+      const values = { total: find('All'), easy: find('Easy'), medium: find('Medium'), hard: find('Hard'), rank: payload.profile?.ranking };
+      if (![values.total, values.easy, values.medium, values.hard].every(Number.isFinite)) throw new Error('Missing solved counts');
+      Object.entries(fields).forEach(([key, el]) => animateNumber(el, Number(values[key])));
+      const denominator = Math.max(1, values.total);
+      [['easy', values.easy], ['medium', values.medium], ['hard', values.hard]].forEach(([key, count]) => {
+        const bar = document.getElementById(`lc-${key}-bar`);
+        if (bar) bar.style.width = `${Math.max(0, Math.min(100, count / denominator * 100))}%`;
+      });
+      status.classList.add('is-live');
+      status.innerHTML = '<span class="lc-sync-dot"></span>LIVE PROFILE · UPDATED JUST NOW';
+    };
+    const load = () => fetch(endpoint, { headers: { Accept: 'application/json' }, cache: 'no-cache' })
+      .then((response) => { if (!response.ok) throw new Error('Stats request failed'); return response.json(); })
+      .then(render)
+      .catch(() => {
+        status.classList.remove('is-live');
+        status.innerHTML = '<span class="lc-sync-dot"></span>LIVE STATS UNAVAILABLE · OPEN PROFILE';
+      });
+    load();
+    window.setInterval(load, 30 * 60 * 1000);
+  }
+
+  // ═════════════════════════════════════════════════════════════════════════
   // INITIALIZATION
   // ═════════════════════════════════════════════════════════════════════════
   document.addEventListener('DOMContentLoaded', () => {
@@ -317,5 +370,6 @@
     initCommandPalette();
     initEmailCopy();
     initMobileMenu();
+    initLeetCodeStats();
   });
 })();
