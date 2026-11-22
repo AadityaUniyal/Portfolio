@@ -12,6 +12,40 @@
     });
   }
 
+  // Treat each major chapter as a distinct visual world while the reader moves.
+  const sceneSections = [...document.querySelectorAll('[data-scene]')];
+  const sceneNames = {
+    gdg: 'GDG LEADERSHIP', systems: 'HOW I BUILD', impact: 'BUILDING IMPACT',
+    projects: 'PROJECT WORLDS', leetcode: 'LEETCODE / PRACTICE', skills: 'ENGINEERING TOOLKIT',
+    community: 'COMMUNITY & EXPERIENCE', credentials: 'CREDENTIALS / LEARNING', contact: 'LET’S BUILD TOGETHER'
+  };
+  const sceneName = document.getElementById('world-hud-name');
+  const sceneCount = document.getElementById('world-hud-count');
+  const sceneLinks = [...document.querySelectorAll('.world-rail a')];
+  const activateScene = (section) => {
+    const index = sceneSections.indexOf(section);
+    if (index < 0) return;
+    root.dataset.scene = section.dataset.scene;
+    section.classList.add('scene-entered');
+    if (sceneName) sceneName.textContent = sceneNames[section.dataset.scene] || section.dataset.scene.toUpperCase();
+    if (sceneCount) sceneCount.textContent = `${String(index + 1).padStart(2, '0')} / ${String(sceneSections.length).padStart(2, '0')}`;
+    sceneLinks.forEach((link) => {
+      const current = link.getAttribute('href') === `#${section.id}`;
+      link.classList.toggle('is-current', current);
+      if (current) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  };
+  if (sceneSections.length && 'IntersectionObserver' in window) {
+    const sceneObserver = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) activateScene(visible.target);
+    }, { rootMargin: '-37% 0px -37% 0px', threshold: [0, 0.2, 0.5, 0.8] });
+    sceneSections.forEach((section) => sceneObserver.observe(section));
+    activateScene(sceneSections[0]);
+  }
+
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduceMotion && 'IntersectionObserver' in window) {
     const reveal = new IntersectionObserver((entries) => {
@@ -62,6 +96,11 @@
   }
 
   document.querySelectorAll('.project-card[data-project-id]').forEach((card) => {
+    card.addEventListener('pointermove', (event) => {
+      const bounds = card.getBoundingClientRect();
+      card.style.setProperty('--card-x', `${event.clientX - bounds.left}px`);
+      card.style.setProperty('--card-y', `${event.clientY - bounds.top}px`);
+    });
     const id = card.dataset.projectId;
     const actions = card.querySelector('.project-actions');
     if (!actions) return;

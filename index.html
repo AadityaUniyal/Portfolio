@@ -44,6 +44,20 @@
     <button class="intro-skip" id="intro-skip" type="button">SKIP INTRO <span>↗</span></button>
   </div>
   <div class="reading-progress" aria-hidden="true"></div>
+  <aside class="world-hud" aria-label="Portfolio chapter navigation">
+    <div class="world-hud-readout"><span class="world-hud-live"></span><span id="world-hud-name">GDG LEADERSHIP</span><b id="world-hud-count">01 / 09</b></div>
+    <nav class="world-rail" aria-label="Jump to a portfolio chapter">
+      <a class="is-current" href="#hero" aria-label="01, GDG leadership" aria-current="location"><span>01</span></a>
+      <a href="#approach" aria-label="02, How I build"><span>02</span></a>
+      <a href="#impact" aria-label="03, Impact"><span>03</span></a>
+      <a href="#projects" aria-label="04, Projects"><span>04</span></a>
+      <a href="#leetcode" aria-label="05, LeetCode"><span>05</span></a>
+      <a href="#skills" aria-label="06, Skills"><span>06</span></a>
+      <a href="#leadership" aria-label="07, Community"><span>07</span></a>
+      <a href="#education" aria-label="08, Education and certifications"><span>08</span></a>
+      <a href="#contact" aria-label="09, Contact"><span>09</span></a>
+    </nav>
+  </aside>
 
   <!-- Ambient Animated Atmosphere -->
   <div class="ambient-bg" aria-hidden="true">
@@ -82,7 +96,7 @@
 
   <main>
     <!-- HERO SECTION -->
-    <section class="hero-section" id="hero">
+    <section class="hero-section" id="hero" data-scene="gdg">
       <div class="container">
         <div class="hero-grid">
           
@@ -172,7 +186,7 @@
       </div>
     </section>
 
-    <section class="approach-section" id="approach" aria-labelledby="approach-title">
+    <section class="approach-section" id="approach" data-scene="systems" aria-labelledby="approach-title">
       <div class="container">
         <header class="approach-heading">
           <div class="section-indicator">[ HOW I APPROACH THE WORK ]</div>
@@ -210,7 +224,7 @@
     </section>
 
     <!-- IMPACT METRICS STRIP -->
-    <section class="impact-strip" aria-label="Key Engineering Metrics">
+    <section class="impact-strip" id="impact" data-scene="impact" aria-label="Key Engineering Metrics">
       <div class="container">
         <div class="metrics-grid">
           <div class="metric-item">
@@ -238,7 +252,7 @@
     </section>
 
     <!-- SELECTED PROJECT CASE STUDIES -->
-    <section class="section" id="projects">
+    <section class="section" id="projects" data-scene="projects">
       <div class="container">
         
         <div class="projects-header-controls">
@@ -554,7 +568,7 @@
     </section>
 
     <!-- LEETCODE & COMPETITIVE ALGORITHMS (LIVE AUTO-UPDATING WIDGET) -->
-    <section class="section" id="leetcode">
+    <section class="section" id="leetcode" data-scene="leetcode">
       <div class="container">
         
         <div class="section-header">
@@ -599,7 +613,7 @@
     </section>
 
     <!-- TECHNICAL ARSENAL / SKILLS MATRIX -->
-    <section class="section" id="skills">
+    <section class="section" id="skills" data-scene="skills">
       <div class="container">
         <div class="section-header">
           <div class="section-indicator">[ 06 // TECHNICAL ARSENAL ]</div>
@@ -702,7 +716,7 @@
     </section>
 
     <!-- CAMPUS LEADERSHIP & COMMUNITY -->
-    <section class="section" id="leadership">
+    <section class="section" id="leadership" data-scene="community">
       <div class="container">
         <div class="section-header">
           <div class="section-indicator">[ 07 // COMMUNITY LEADERSHIP ]</div>
@@ -736,7 +750,7 @@
     </section>
 
     <!-- EDUCATION SECTION (STRICTLY NO SCORES AS SPECIFIED) -->
-    <section class="section" id="education" style="background: rgba(15, 17, 24, 0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <section class="section" id="education" data-scene="credentials" style="background: rgba(15, 17, 24, 0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
       <div class="container">
         <div class="section-header">
           <div class="section-indicator">[ 08 // ACADEMICS & ACCREDITATIONS ]</div>
@@ -796,7 +810,7 @@
     </section>
 
     <!-- CONNECT / CONTACT SECTION -->
-    <section class="section" id="contact">
+    <section class="section" id="contact" data-scene="contact">
       <div class="container">
         <div class="contact-card">
           <div class="section-indicator" style="justify-content: center;">[ 10 // GET IN TOUCH ]</div>
