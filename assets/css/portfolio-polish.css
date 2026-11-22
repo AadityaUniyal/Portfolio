@@ -102,6 +102,7 @@ body::selection { color: #101210; background: #9ed4c3; }
 .credential-link:hover, .credential-link:focus-visible { border-color: var(--accent-cyan); background: rgba(255,255,255,.045); transform: translateY(-3px); outline: none; }
 .credential-link small { margin-top: auto; color: var(--accent-cyan); font: 600 .67rem var(--font-mono); letter-spacing: .03em; }
 .credentials-source-note { margin-top: 1rem; color: var(--text-muted); font-size: .76rem; line-height: 1.65; }
+.credentials-source-note a { color: var(--world-accent); text-underline-offset: 3px; }
 .credentials-profile-link { display: inline-block; margin-top: 1rem; color: #bce7d6; font-size: 0.82rem; text-decoration: none; }
 .credentials-profile-link:hover { color: white; text-decoration: underline; text-underline-offset: 3px; }
 .site-footer { border-top: 1px solid var(--border-subtle); }
