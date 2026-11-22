@@ -362,7 +362,29 @@
   // ═════════════════════════════════════════════════════════════════════════
   // INITIALIZATION
   // ═════════════════════════════════════════════════════════════════════════
+  function initIntro() {
+    const intro = document.getElementById('intro-sequence');
+    const skip = document.getElementById('intro-skip');
+    if (!intro) return;
+
+    let finished = false;
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      intro.classList.add('is-done');
+      document.documentElement.classList.add('intro-finished');
+      window.setTimeout(() => intro.remove(), 800);
+    };
+
+    if (skip) skip.addEventListener('click', finish);
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !finished) finish();
+    }, { once: true });
+    window.setTimeout(finish, 4100);
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
+    initIntro();
     initTypewriter();
     init3DTilt();
     initProjectFilters();
