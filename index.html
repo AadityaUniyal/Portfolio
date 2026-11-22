@@ -155,16 +155,37 @@
 
     <section class="approach-section" id="approach" aria-labelledby="approach-title">
       <div class="container">
-        <div class="approach-intro">
+        <header class="approach-heading">
           <div class="section-indicator">[ HOW I APPROACH THE WORK ]</div>
-          <h2 id="approach-title">Different problems.<br><span class="text-gradient">One way of thinking.</span></h2>
-          <p>Across accessibility, wellness, document review, commerce, and cloud tooling, I keep coming back to the same question: what would make this workflow more useful—and easier to trust?</p>
-          <a href="about.html" class="approach-more">A little more about me <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="approach-steps">
-          <article class="approach-step"><span class="approach-number">01</span><div><h3>Start with the journey</h3><p>Understand the real steps a person has to take. BarrierLens tests interactions; Fitness_Smarty joins health routines that usually live in separate tools.</p></div><span class="approach-tag">PEOPLE → PRODUCT</span></article>
-          <article class="approach-step"><span class="approach-number">02</span><div><h3>Follow the whole system</h3><p>Connect the interface to the services and decisions behind it. DarkStori and MiniCloud are exercises in making those connections explicit.</p></div><span class="approach-tag">UI → INFRASTRUCTURE</span></article>
-          <article class="approach-step"><span class="approach-number">03</span><div><h3>Make results inspectable</h3><p>For high-stakes output, show where it came from. Quorum OS pairs model reasoning with deterministic checks and evidence trails.</p></div><span class="approach-tag">OUTPUT → EVIDENCE</span></article>
+          <h2 id="approach-title">I like building the <span class="text-gradient">whole thing.</span></h2>
+          <p>Across different projects, I keep asking: what does a person need, what does the system do, and how can we know the result is useful?</p>
+          <a href="about.html" class="approach-more">More about me <span aria-hidden="true">↗</span></a>
+        </header>
+        <div class="scroll-story" data-active="0">
+          <aside class="scroll-stage" aria-label="Product building layers, updating as you scroll">
+            <div class="stage-topline"><span class="stage-live-dot"></span><span>FROM IDEA TO WORKING PRODUCT</span><span class="stage-counter" id="stage-counter">01 / 03</span></div>
+            <div class="stage-canvas">
+              <div class="stage-halo"></div>
+              <svg class="stage-connections" viewBox="0 0 600 500" aria-hidden="true"><path class="stage-path" d="M92 245 C165 105 225 105 300 245 S435 385 508 245"/><path class="stage-path-shadow" d="M92 245 C165 105 225 105 300 245 S435 385 508 245"/></svg>
+              <div class="stage-chip stage-user"><span>01</span><strong>PERSON</strong></div>
+              <div class="stage-chip stage-product"><span>02</span><strong>PRODUCT</strong></div>
+              <div class="stage-chip stage-system"><span>03</span><strong>SYSTEM</strong></div>
+              <div class="stage-chip stage-proof"><span>04</span><strong>EVIDENCE</strong></div>
+              <div class="stage-core"><span class="stage-core-label" id="stage-label">START WITH THE JOURNEY</span><strong id="stage-project">BarrierLens</strong><p id="stage-description">Does this interaction work for a real person?</p></div>
+            </div>
+            <div class="stage-footline"><span>KEEP SCROLLING</span><span class="stage-progress"><i id="stage-progress"></i></span><span id="stage-step">01</span></div>
+          </aside>
+          <div class="scroll-chapters">
+            <article class="scroll-chapter is-active" data-step="0" data-label="START WITH THE JOURNEY" data-project="BarrierLens" data-description="Does this interaction work for a real person?">
+              <span class="chapter-index">01 — PEOPLE FIRST</span><h3>Start with the journey.</h3><p>A product is more than its screen. BarrierLens explores what happens as someone moves through an interface; Fitness_Smarty brings scattered health routines into one product.</p><span class="chapter-connector">USER NEED <b>→</b> PRODUCT CHOICE</span>
+            </article>
+            <article class="scroll-chapter" data-step="1" data-label="FOLLOW THE WHOLE SYSTEM" data-project="DarkStori + MiniCloud" data-description="How do the parts work together?">
+              <span class="chapter-index">02 — SYSTEMS THINKING</span><h3>Follow the connections.</h3><p>DarkStori connects planning to store operations and dispatch. MiniCloud models how identity, storage, compute, and events depend on one another.</p><span class="chapter-connector">INTERFACE <b>→</b> SERVICES <b>→</b> INFRASTRUCTURE</span>
+            </article>
+            <article class="scroll-chapter" data-step="2" data-label="MAKE RESULTS INSPECTABLE" data-project="Quorum OS" data-description="Can someone trace the answer back to evidence?">
+              <span class="chapter-index">03 — TRUST THE RESULT</span><h3>Make the answer inspectable.</h3><p>Quorum OS pairs model output with deterministic checks and source evidence. I’m interested in the handoff between what a system says and what a person can verify.</p><span class="chapter-connector">MODEL OUTPUT <b>→</b> CHECKS <b>→</b> EVIDENCE</span>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -719,18 +740,18 @@
 
         <!-- Certifications listed on LinkedIn -->
         <div class="credentials-grid" aria-label="Certifications and training badges">
-          <article class="credential-card"><strong>Microsoft Certified: Azure Fundamentals</strong><span>Microsoft · Mar 2025</span></article>
-          <article class="credential-card"><strong>GitHub Copilot Fundamentals</strong><span>Microsoft · Mar 2025</span></article>
-          <article class="credential-card"><strong>AWS Cloud Quest: Cloud Practitioner</strong><span>AWS training badge · Oct 2025</span></article>
-          <article class="credential-card"><strong>AWS Knowledge: Cloud Essentials</strong><span>AWS training badge · Oct 2025</span></article>
-          <article class="credential-card"><strong>Artificial Intelligence</strong><span>DeepLearning.AI · Oct 2025</span></article>
-          <article class="credential-card"><strong>Artificial Intelligence</strong><span>Teachnook · Feb 2025</span></article>
-          <article class="credential-card"><strong>Deloitte Australia Data Analytics Job Simulation</strong><span>Forage · Jul 2025</span></article>
-          <article class="credential-card"><strong>Google Play Academy: Store Listing Certificate</strong><span>Google Play Academy · Apr 2025</span></article>
-          <article class="credential-card"><strong>DSA in Python Quiz</strong><span>Elite Coders · Oct 2025</span></article>
-          <article class="credential-card"><strong>Elite Quiz 3.0</strong><span>Elite Coders · Oct 2025</span></article>
+          <a class="credential-card credential-link" href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/details/certifications/" target="_blank" rel="noopener noreferrer"><strong>Microsoft Certified: Azure Fundamentals</strong><span>Microsoft · Mar 2025</span><small>View LinkedIn credential ↗</small></a>
+          <a class="credential-card credential-link" href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/details/certifications/" target="_blank" rel="noopener noreferrer"><strong>GitHub Copilot Fundamentals</strong><span>Microsoft · Mar 2025 · ID 8008129</span><small>View LinkedIn credential ↗</small></a>
+          <a class="credential-card credential-link" href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/details/certifications/" target="_blank" rel="noopener noreferrer"><strong>AWS Cloud Quest: Cloud Practitioner</strong><span>AWS training badge · Oct 2025</span><small>View LinkedIn credential ↗</small></a>
+          <a class="credential-card credential-link" href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/details/certifications/" target="_blank" rel="noopener noreferrer"><strong>AWS Knowledge: Cloud Essentials</strong><span>AWS training badge · Oct 2025</span><small>View LinkedIn credential ↗</small></a>
+          <a class="credential-card credential-link" href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/details/certifications/" target="_blank" rel="noopener noreferrer"><strong>Artificial Intelligence</strong><span>DeepLearning.AI · Oct 2025</span><small>View LinkedIn credential ↗</small></a>
+          <a class="credential-card credential-link" href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/details/certifications/" target="_blank" rel="noopener noreferrer"><strong>Artificial Intelligence</strong><span>Teachnook · Feb 2025 · ID TNCCAI-241089</span><small>View LinkedIn credential ↗</small></a>
+          <a class="credential-card credential-link" href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/details/certifications/" target="_blank" rel="noopener noreferrer"><strong>Deloitte Australia Data Analytics Job Simulation</strong><span>Forage · Jul 2025 · ID CjuZ66A8Ctsa7Assx</span><small>View LinkedIn credential ↗</small></a>
+          <a class="credential-card credential-link" href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/details/certifications/" target="_blank" rel="noopener noreferrer"><strong>Google Play Academy: Store Listing Certificate</strong><span>Google Play Academy · Apr 2025 · ID 140411253</span><small>View LinkedIn credential ↗</small></a>
+          <a class="credential-card credential-link" href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/details/certifications/" target="_blank" rel="noopener noreferrer"><strong>DSA in Python Quiz</strong><span>Elite Coders · Oct 2025 · ID EC-DSA-PYTHON-BEGINNER-84803856-C0DH6U</span><small>View LinkedIn credential ↗</small></a>
+          <a class="credential-card credential-link" href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/details/certifications/" target="_blank" rel="noopener noreferrer"><strong>Elite Quiz 3.0</strong><span>Elite Coders · Oct 2025</span><small>View LinkedIn credential ↗</small></a>
         </div>
-        <a class="credentials-profile-link" href="https://www.linkedin.com/in/aaditya-uniyal-48ab7b342/" target="_blank" rel="noopener noreferrer">View LinkedIn profile for credentials ↗</a>
+        <p class="credentials-source-note">Credential cards open the certifications section of my LinkedIn profile. LinkedIn does not expose separate credential URLs in its public profile view.</p>
 
       </div>
     </section>

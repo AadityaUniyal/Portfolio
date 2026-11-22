@@ -16,7 +16,18 @@
 .interest-grid p,.fact-list p { color:var(--text-secondary); font-size:.94rem; line-height:1.75; }
 .fact-list article { padding:1rem 0 1.3rem; border-top:1px solid var(--border-subtle); }
 .fact-list p { margin-top:.45rem; }
+.about-archive { padding:clamp(3rem,7vw,6rem) 0; border-top:1px solid var(--border-subtle); }
+.archive-heading { display:grid; grid-template-columns:1fr minmax(280px,.8fr); column-gap:3rem; align-items:end; }
+.archive-heading .about-label { grid-column:1/-1; }
+.archive-heading h2 { max-width:650px; margin:1rem 0; font:600 clamp(2rem,4.5vw,3.7rem)/1.05 var(--font-display); letter-spacing:-.055em; }
+.archive-heading p { max-width:540px; color:var(--text-secondary); line-height:1.8; }
+.archive-heading>a { grid-column:2; grid-row:3; justify-self:start; margin-top:1rem; color:var(--world-accent); text-decoration:none; font-weight:650; }
+.archive-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1px; margin-top:3rem; border:1px solid var(--border-subtle); background:var(--border-subtle); }
+.archive-grid article { min-height:205px; padding:1.5rem; background:var(--world-bg); }
+.archive-grid article>span { color:var(--world-accent); font:.62rem var(--font-mono); letter-spacing:.08em; }
+.archive-grid h3 { margin:1.6rem 0 .5rem; font:600 1.35rem var(--font-display); }
+.archive-grid p { max-width:500px; color:var(--text-secondary); font-size:.9rem; line-height:1.7; }
 .about-close { padding:clamp(4rem,9vw,8rem) 1.5rem; border-top:1px solid var(--border-subtle); text-align:center; }
 .about-close h2 { max-width:760px; margin:1rem auto 1.8rem; font:600 clamp(2rem,5vw,4.4rem)/1.06 var(--font-display); letter-spacing:-.06em; }
 .about-page+.site-footer a { color:var(--text-secondary); text-decoration:none; }
-@media(max-width:720px) { .about-story,.about-facts { grid-template-columns:1fr; gap:1.6rem; } .interest-grid { grid-template-columns:1fr; } .interest-grid article { min-height:180px; } .interest-grid h3 { margin-top:1.5rem; } }
+@media(max-width:720px) { .about-story,.about-facts { grid-template-columns:1fr; gap:1.6rem; } .interest-grid { grid-template-columns:1fr; } .interest-grid article { min-height:180px; } .interest-grid h3 { margin-top:1.5rem; } .archive-heading { display:block; } .archive-grid { grid-template-columns:1fr; } }
