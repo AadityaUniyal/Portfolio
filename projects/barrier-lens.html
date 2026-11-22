@@ -1,3 +1,93 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="barrier-lens project case study by Aaditya Uniyal"><title>Project case study — Aaditya Uniyal</title><link rel="stylesheet" href="case-study.css"></head>
-<body data-project="barrier-lens"><div class="reading-progress" aria-hidden="true"></div><main class="case-page" id="case-content"><p>Loading project…</p></main><script src="../assets/js/portfolio-data.js"></script><script src="../assets/js/project-page.js"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aaditya Uniyal's BarrierLens case study: building a behavior-focused accessibility audit and repair workflow for interactive web applications.">
+  <meta name="theme-color" content="#08090d">
+  <title>BarrierLens — Engineering case study by Aaditya Uniyal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="barrier-lens.css">
+</head>
+<body class="barrier-case">
+  <div class="reading-progress" aria-hidden="true"></div>
+  <header class="case-nav">
+    <a class="case-wordmark" href="../index.html" aria-label="Aaditya Uniyal — home"><span></span>AADITYA UNIYAL</a>
+    <a href="../index.html#projects">Back to selected work <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-hero-copy">
+        <p class="case-eyebrow"><span>01 / 05</span><span>AI · Accessibility · Developer tools</span></p>
+        <p class="case-overline">A product that checks the journey, not just the markup.</p>
+        <h1 id="case-title">Barrier<span>Lens</span></h1>
+        <p class="case-deck">I’m interested in the moments a static scan can’t see: a dialog that steals focus, a menu you can’t leave, a change the interface never announces. BarrierLens explores how an agent can move through those moments, verify what happened, and give an engineer something concrete to inspect.</p>
+        <div class="case-actions">
+          <a class="case-button" href="https://github.com/AadityaUniyal/BarrierLens" target="_blank" rel="noreferrer">Explore the source <span aria-hidden="true">↗</span></a>
+          <a class="case-text-link" href="http://43.205.254.136" target="_blank" rel="noreferrer">Open deployed project <span aria-hidden="true">↗</span></a>
+        </div>
+        <dl class="case-facts">
+          <div><dt>Focus</dt><dd>Interactive accessibility</dd></div>
+          <div><dt>Approach</dt><dd>Browser automation + analysis</dd></div>
+          <div><dt>Stack</dt><dd>Next.js · TypeScript · Playwright</dd></div>
+        </dl>
+      </div>
+
+      <div class="case-orbit" aria-label="Diagram: BarrierLens turns an interactive browser journey into observations, checks, and reviewable repair evidence">
+        <div class="orbit-label orbit-label-top">LIVE INTERACTION</div>
+        <div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div><div class="orbit-ring ring-three"></div>
+        <div class="orbit-node node-browser"><span class="node-icon">⌘</span><span>Browser<br>journey</span></div>
+        <div class="orbit-node node-agent"><span class="node-icon">◉</span><span>Observe<br>& reason</span></div>
+        <div class="orbit-node node-evidence"><span class="node-icon">⌁</span><span>Evidence<br>& review</span></div>
+        <svg class="orbit-route" viewBox="0 0 600 600" aria-hidden="true"><path d="M119 310 C138 162 258 128 330 194 S480 284 427 389 276 479 196 411 111 355 119 310Z" pathLength="1"/></svg>
+        <div class="orbit-center"><span class="center-mark">B</span><span>BarrierLens</span><small>BEHAVIORAL AUDIT LOOP</small></div>
+        <div class="orbit-label orbit-label-bottom">OBSERVE → VERIFY → REVIEW</div>
+      </div>
+      <div class="case-scroll-cue" aria-hidden="true"><span></span>Scroll to follow the system</div>
+    </section>
+
+    <div class="case-layout">
+      <aside class="case-index" aria-label="Case study sections"><span>ON THIS PAGE</span><a href="#question">The question</a><a href="#system">The system</a><a href="#decisions">Engineering choices</a><a href="#reflection">What I learned</a></aside>
+      <div class="case-content">
+        <section class="case-section reveal" id="question">
+          <p class="section-index">01 — THE QUESTION</p><h2>What changes when an audit follows a person’s path?</h2>
+          <div class="prose-grid"><p class="prose-lead">A page can look correct in its initial state and still become unusable after the first click.</p><div><p>Accessibility checks often begin with the DOM as it exists at load. But keyboard and assistive technology problems can emerge in transitions: opening a dialog, moving through a form, changing routes, or receiving a validation message.</p><p>That made the product question specific: can an automated system explore a live interface, reason about what it observes, and keep the trail useful to the engineer who has to decide what happens next?</p></div></div>
+        </section>
+
+        <section class="case-section reveal" id="system">
+          <p class="section-index">02 — THE SYSTEM</p><h2>A loop with a human-readable trail.</h2>
+          <p class="section-intro">The repository connects a browser-based audit flow with analysis, repair verification, and an optional GitHub pull request path. Each stage has a boundary and a place to inspect the output.</p>
+          <div class="flow-visual" aria-label="Audit flow diagram">
+            <div class="flow-step"><span>01</span><b>Choose a target</b><small>A URL and a user journey</small></div><i aria-hidden="true">→</i>
+            <div class="flow-step"><span>02</span><b>Explore the page</b><small>Playwright-driven interaction</small></div><i aria-hidden="true">→</i>
+            <div class="flow-step"><span>03</span><b>Inspect behavior</b><small>Focus, announcements, semantics</small></div><i aria-hidden="true">→</i>
+            <div class="flow-step"><span>04</span><b>Review a repair</b><small>Verify a patch, then inspect evidence</small></div>
+          </div>
+          <div class="system-notes"><article><span class="note-symbol">↳</span><h3>Reconnaissance</h3><p>The recon engine reads headings, navigation, buttons, and form affordances to infer page landmarks and possible goals.</p></article><article><span class="note-symbol">⌖</span><h3>Browser audit</h3><p>The auditor core composes browser automation with focused analysis engines and records the run through project services.</p></article><article><span class="note-symbol">✓</span><h3>Repair verification</h3><p>A proposed patch can be replayed against a guarded target. A separate route prepares a GitHub pull request from a supplied finding and patch.</p></article></div>
+        </section>
+
+        <section class="case-section reveal" id="decisions">
+          <p class="section-index">03 — ENGINEERING CHOICES</p><h2>Make exploration inspectable. Keep trust in the loop.</h2>
+          <div class="decision-list">
+            <article><span>01</span><div><h3>Explore from landmarks</h3><p>Page structure provides a starting point for goal discovery. The recon engine collects visible semantic cues instead of assuming every site has the same journey.</p></div><a href="https://github.com/AadityaUniyal/BarrierLens/blob/main/lib/barrierlens/agent/recon-engine.ts" target="_blank" rel="noreferrer" aria-label="View reconnaissance engine source">↗</a></article>
+            <article><span>02</span><div><h3>Put boundaries around targets</h3><p>The public audit and repair flows use target policy checks, including URL resolution, before they visit an external page. That boundary matters when a service browses on a user’s behalf.</p></div><a href="https://github.com/AadityaUniyal/BarrierLens/blob/main/app/api/repair/verify/route.ts" target="_blank" rel="noreferrer" aria-label="View repair verification route source">↗</a></article>
+            <article><span>03</span><div><h3>Separate a proposal from proof</h3><p>Patch verification is a distinct operation from generating a patch. Keeping those steps separate gives reviewers a place to question the change and its observed result.</p></div><a href="https://github.com/AadityaUniyal/BarrierLens/blob/main/app/api/repair/verify/route.ts" target="_blank" rel="noreferrer" aria-label="View repair verification route source">↗</a></article>
+            <article><span>04</span><div><h3>Treat integrations as an explicit action</h3><p>The GitHub integration route accepts finding and patch details to create a reviewable PR. A generated change should enter an engineer’s workflow with context, not silently rewrite a codebase.</p></div><a href="https://github.com/AadityaUniyal/BarrierLens/blob/main/app/api/integrations/github/pr/route.ts" target="_blank" rel="noreferrer" aria-label="View GitHub pull request integration source">↗</a></article>
+          </div>
+        </section>
+
+        <section class="case-section reveal" id="reflection">
+          <p class="section-index">04 — WHAT I’M TAKING FORWARD</p><h2>Automation is useful when it leaves people more context.</h2>
+          <div class="prose-grid"><p class="prose-lead">The hard part is not making an agent click. It’s making the result understandable enough to trust, challenge, and improve.</p><div><p>BarrierLens is where I’ve been exploring that end-to-end product problem: browser automation, analysis services, guarded network access, a repair path, and a developer-facing handoff.</p><p>The next step I care about is evidence quality: make every finding easier to reproduce, connect it to the exact interaction that exposed it, and help a human reviewer understand the limits of the proposed fix.</p></div></div>
+          <div class="case-cta"><div><span class="section-index">KEEP EXPLORING</span><h3>Read the code. Inspect the running product.</h3></div><div class="case-actions"><a class="case-button" href="https://github.com/AadityaUniyal/BarrierLens" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a class="case-text-link" href="http://43.205.254.136" target="_blank" rel="noreferrer">Live deployment <span aria-hidden="true">↗</span></a></div></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="case-footer"><a href="../index.html">← Aaditya Uniyal</a><span>Built around questions worth testing.</span><a href="../index.html#projects">More projects ↗</a></footer>
+  <script src="barrier-lens.js"></script>
+</body>
+</html>

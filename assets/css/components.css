@@ -268,6 +268,22 @@
   border-top: 1px solid var(--border-subtle);
 }
 
+.project-case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+  color: var(--accent-cyan);
+  font: 0.72rem var(--font-mono);
+  text-decoration: none;
+  transition: gap var(--transition-fast), color var(--transition-fast);
+}
+
+.project-case-link:hover {
+  gap: 0.8rem;
+  color: var(--text-primary);
+}
+
 .project-inspect-btn {
   background: none;
   border: none;
