@@ -1,3 +1,93 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="quorum project case study by Aaditya Uniyal"><title>Project case study — Aaditya Uniyal</title><link rel="stylesheet" href="case-study.css"></head>
-<body data-project="quorum"><div class="reading-progress" aria-hidden="true"></div><main class="case-page" id="case-content"><p>Loading project…</p></main><script src="../assets/js/portfolio-data.js"></script><script src="../assets/js/project-page.js"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aaditya Uniyal's Quorum OS case study: a document review workflow combining specialized agents, deterministic arithmetic checks, and source-linked evidence.">
+  <meta name="theme-color" content="#09090d">
+  <title>Quorum OS — Engineering case study by Aaditya Uniyal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project-case.css">
+</head>
+<body class="quorum-case">
+  <div class="reading-progress" aria-hidden="true"></div>
+  <header class="case-nav">
+    <a class="case-wordmark" href="../index.html" aria-label="Aaditya Uniyal — home"><span></span>AADITYA UNIYAL</a>
+    <a href="../index.html#projects">Back to selected work <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="case-hero-copy">
+        <p class="case-eyebrow"><span>03 / 05</span><span>AI · Document workflows · Verification</span></p>
+        <p class="case-overline">Make the answer traceable to the page it came from.</p>
+        <h1 id="case-title">Quorum<span> OS</span></h1>
+        <p class="case-deck">I wanted to explore a better handoff between document extraction and human review. Quorum OS combines specialized agent opinions with deterministic arithmetic checks and spatial evidence, so a reviewer has more than a confident sentence to work with.</p>
+        <div class="case-actions">
+          <a class="case-button" href="https://github.com/AadityaUniyal/Quorum-" target="_blank" rel="noreferrer">Explore the source <span aria-hidden="true">↗</span></a>
+          <a class="case-text-link" href="https://quorum-os.vercel.app" target="_blank" rel="noreferrer">Open deployed project <span aria-hidden="true">↗</span></a>
+        </div>
+        <dl class="case-facts">
+          <div><dt>Problem space</dt><dd>Financial & legal documents</dd></div>
+          <div><dt>Design principle</dt><dd>Evidence before confidence</dd></div>
+          <div><dt>Stack</dt><dd>Next.js · FastAPI · Postgres</dd></div>
+        </dl>
+      </div>
+
+      <div class="case-orbit quorum-orbit" role="img" aria-label="Diagram: extracted document fields flow through specialized agents, exact arithmetic checks, and a spatial evidence record for human review">
+        <div class="orbit-label orbit-label-top">DOCUMENT REVIEW PIPELINE</div>
+        <div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div><div class="orbit-ring ring-three"></div>
+        <div class="orbit-node node-browser"><span class="node-icon">▤</span><span>Source<br>document</span></div>
+        <div class="orbit-node node-agent"><span class="node-icon">◈</span><span>Agent<br>review</span></div>
+        <div class="orbit-node node-evidence"><span class="node-icon">⌖</span><span>Evidence<br>record</span></div>
+        <svg class="orbit-route" viewBox="0 0 600 600" aria-hidden="true"><path d="M119 310 C138 162 258 128 330 194 S480 284 427 389 276 479 196 411 111 355 119 310Z" pathLength="1"/></svg>
+        <div class="orbit-center"><span class="center-mark">Q</span><span>Quorum OS</span><small>REVIEWABLE OUTPUT</small></div>
+        <div class="orbit-label orbit-label-bottom">EXTRACT → CHALLENGE → VERIFY</div>
+      </div>
+      <div class="case-scroll-cue" aria-hidden="true"><span></span>Scroll to follow the system</div>
+    </section>
+
+    <div class="case-layout">
+      <aside class="case-index" aria-label="Case study sections"><span>ON THIS PAGE</span><a href="#question">The question</a><a href="#system">The system</a><a href="#decisions">Engineering choices</a><a href="#reflection">What I learned</a></aside>
+      <div class="case-content">
+        <section class="case-section reveal" id="question">
+          <p class="section-index">01 — THE QUESTION</p><h2>How do you make extracted information easier to challenge?</h2>
+          <div class="prose-grid"><p class="prose-lead">A useful document workflow needs to show what it found, how it checked it, and where a reviewer can confirm it.</p><div><p>Language models can help interpret inconsistent documents, but they are probabilistic. For financial review, a plausible total is not a verified total. For any extracted field, a reviewer should be able to return to the relevant part of the source.</p><p>Quorum OS is my exploration of that combined problem: organize multiple interpretations, add deterministic checks where the math is known, and preserve a path back to the evidence.</p></div></div>
+        </section>
+
+        <section class="case-section reveal" id="system">
+          <p class="section-index">02 — THE SYSTEM</p><h2>Different kinds of uncertainty get different checks.</h2>
+          <p class="section-intro">The repository separates document intake, agent orchestration, arithmetic verification, and provenance generation. The interface can then present a finding alongside the information used to derive it.</p>
+          <div class="flow-visual" role="img" aria-label="Document review flow diagram">
+            <div class="flow-step"><span>01</span><b>Ingest a document</b><small>Upload and classify</small></div><i aria-hidden="true">→</i>
+            <div class="flow-step"><span>02</span><b>Extract & compare</b><small>Specialized agent outputs</small></div><i aria-hidden="true">→</i>
+            <div class="flow-step"><span>03</span><b>Verify known math</b><small>Decimal and constraint checks</small></div><i aria-hidden="true">→</i>
+            <div class="flow-step"><span>04</span><b>Return to evidence</b><small>Coordinates and token record</small></div>
+          </div>
+          <div class="system-notes"><article><span class="note-symbol">◈</span><h3>Specialized agents</h3><p>Extractor, auditor, compliance, critic, reconciler, memory, and summary roles each contribute to the document workflow.</p></article><article><span class="note-symbol">∑</span><h3>Exact arithmetic</h3><p>The SMT verifier parses values as Python Decimal and applies explicit rounding for arithmetic checks.</p></article><article><span class="note-symbol">⌖</span><h3>Spatial provenance</h3><p>The provenance service hashes field values together with bounding boxes and raw token text into a Merkle structure.</p></article></div>
+        </section>
+
+        <section class="case-section reveal" id="decisions">
+          <p class="section-index">03 — ENGINEERING CHOICES</p><h2>Don’t ask one model to be the source of truth.</h2>
+          <div class="decision-list">
+            <article><span>01</span><div><h3>Route work by responsibility</h3><p>The orchestration layer calls separate agents and includes category-aware weighting. That creates room to treat invoices, contracts, and other document types differently.</p></div><a href="https://github.com/AadityaUniyal/Quorum-/blob/main/backend/app/agents/consensus.py" target="_blank" rel="noreferrer" aria-label="View agent orchestration source">↗</a></article>
+            <article><span>02</span><div><h3>Make consensus a replaceable strategy</h3><p>The domain layer defines vote and decision objects alongside pluggable consensus strategies. Agreement and confidence are part of the result, so the system can surface uncertainty instead of hiding it.</p></div><a href="https://github.com/AadityaUniyal/Quorum-/blob/main/backend/app/domain/consensus_engine.py" target="_blank" rel="noreferrer" aria-label="View consensus engine source">↗</a></article>
+            <article><span>03</span><div><h3>Use deterministic math for arithmetic</h3><p>The SMT arithmetic verifier uses Decimal values and explicit constraints for invoice checks. This narrows the role of model output when a calculation can be stated precisely.</p></div><a href="https://github.com/AadityaUniyal/Quorum-/blob/main/backend/app/services/smt_verifier.py" target="_blank" rel="noreferrer" aria-label="View arithmetic verification source">↗</a></article>
+            <article><span>04</span><div><h3>Anchor values to source material</h3><p>The Merkle provenance service computes field hashes with bounding-box and raw-token inputs. That record is designed to make source association inspectable and tamper-evident.</p></div><a href="https://github.com/AadityaUniyal/Quorum-/blob/main/backend/app/services/merkle_provenance.py" target="_blank" rel="noreferrer" aria-label="View provenance service source">↗</a></article>
+          </div>
+        </section>
+
+        <section class="case-section reveal" id="reflection">
+          <p class="section-index">04 — WHAT I’M TAKING FORWARD</p><h2>Confidence should come with a way to inspect the work.</h2>
+          <div class="prose-grid"><p class="prose-lead">The product challenge is not only extracting fields. It is helping a person decide what deserves attention next.</p><div><p>Building Quorum OS has pushed me to think in boundaries: language models for interpretation, deterministic routines for arithmetic, and provenance structures for source association. Each contributes a different kind of signal.</p><p>The next design challenge is making disagreement legible. A strong review experience should let someone compare the competing values, jump to their source locations, and understand exactly which checks passed or remain uncertain.</p></div></div>
+          <div class="case-cta"><div><span class="section-index">KEEP EXPLORING</span><h3>Read the implementation. Follow the evidence model.</h3></div><div class="case-actions"><a class="case-button" href="https://github.com/AadityaUniyal/Quorum-" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a class="case-text-link" href="https://quorum-os.vercel.app" target="_blank" rel="noreferrer">Live deployment <span aria-hidden="true">↗</span></a></div></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="case-footer"><a href="../index.html">← Aaditya Uniyal</a><span>Built around questions worth testing.</span><a href="../index.html#projects">More projects ↗</a></footer>
+  <script src="project-case.js"></script>
+</body>
+</html>
