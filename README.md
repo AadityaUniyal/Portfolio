@@ -1,72 +1,50 @@
-# Aaditya Uniyal - Engineering Portfolio
+# Aaditya Uniyal — Portfolio
 
-A modern, high-performance portfolio built for **Aaditya Uniyal** (AI Systems Engineer & Software Architect).
+A static portfolio for Aaditya Uniyal, a Computer Science student at Graphic Era Deemed to be University. It presents selected project case studies, experience, community involvement, education, certifications, skills, and links to GitHub, LinkedIn, and LeetCode.
 
-Designed with a cyber-editorial aesthetic inspired by **louisejongen.com**, **tomdekoning.work**, and **kopetzki.law**, tailored for engineering recruiters and software builders.
+The landing page uses a scroll-led story layout with three selectable themes: Studio, Hero, and Voxel. Each featured project has its own case-study page under `projects/`. The visual themes are original interpretations, with no franchise artwork or assets.
 
----
+## Featured projects
 
-## ⚡ Highlights & Key Features
+- **BarrierLens** — agentic web accessibility testing and code remediation.
+- **Fitness_Smarty** — AI-assisted fitness, nutrition, and wellness platform.
+- **Quorum OS** — document intelligence with agent consensus, deterministic arithmetic, and evidence provenance.
+- **DarkStori** — operations platform for quick-commerce networks.
+- **MiniCloud** — a local simulation of core AWS workflows.
 
-- **Top 4 Engineering Projects with Animated Blueprints:**
-  1. **Nexus:** Autonomous Logistics & Spatial Intelligence (3D GIS, Groq LLaMA 3.3 + Gemini dual engine, deterministic physics).
-  2. **Quorum:** Distributed Document Intelligence & RAG Platform (FastAPI, RabbitMQ asynchronous worker queues, ChromaDB, Redis, SSE streaming).
-  3. **Mini-AWS (MiniCloud):** Self-Hosted Cloud Infrastructure (Spring Boot, Docker Engine containerized Lambda execution, S3 event triggers, IAM RBAC).
-  4. **LocalLens:** AI-Powered Smart City Infrastructure (Computer Vision traffic monitoring, emergency blood donor proximity dispatch).
-- **Interactive System Architecture Modal:** In-depth problem statement, topological data-flow diagrams, and benchmarks for each project.
-- **Cenlub Systems AI Engineering Internship:** Multi-agent LLM pipeline & auditor agent automation breakdown (70% processing time reduction).
-- **Academic Background:** Graphic Era Deemed to be University, B.Tech CSE (2024–2028), GDG Campus Lead *(strictly formatted without grades/scores)*.
-- **LeetCode & Problem Solving Strip:** 500+ algorithmic problems solved across Graphs, DP, Trees, and Concurrency; Top 19% in Goldman Sachs Engineering Hackathon 2026.
-- **Interactive Developer Console / Terminal:** Recruiters can test commands (`projects`, `experience`, `skills`, `leetcode`, `contact`, `sudo hire`).
-- **Command Palette (`Cmd + K` / `Ctrl + K`):** Quick keyboard search and navigation across sections, modals, and actions.
-- **Synthesized Web Audio Engine:** Tactile acoustic feedback generated directly via the Web Audio API (zero external audio files, mute/unmute toggle included).
-- **Fluid Magnetic Cursor:** Smooth desktop cursor follower with interactive hover states.
-- **1-Click Direct Email Copy:** Instant clipboard copy with notification toast.
+## Run locally
 
----
+Open `index.html` in a browser, or serve the folder over HTTP:
 
-## 📂 File Structure
+```bash
+python -m http.server 3000
+```
+
+Then visit `http://localhost:3000`.
+
+## Project structure
 
 ```text
 Portfolio/
-├── index.html                   # Main semantic HTML5 document
+├── index.html
+├── projects/                  # Individual project case studies
 ├── assets/
 │   ├── css/
-│   │   ├── style.css            # Base design system, variables, typography & layout
-│   │   ├── components.css       # Project cards, modals, terminal, badges & controls
-│   │   └── animations.css       # Keyframes, floating orbs, and responsive breakpoints
+│   │   ├── style.css
+│   │   ├── components.css
+│   │   ├── animations.css
+│   │   ├── portfolio-polish.css
+│   │   └── experience.css
 │   ├── js/
-│   │   ├── main.js              # Typewriter effect, modals, filter tabs, command palette
-│   │   ├── audio.js             # Synthesized Web Audio engine & mute persistence
-│   │   ├── cursor.js            # Fluid magnetic custom cursor
-│   │   └── terminal.js          # Interactive bash console with command processor
+│   │   ├── main.js
+│   │   ├── portfolio-data.js
+│   │   ├── experience.js
+│   │   └── project-page.js
 │   └── images/
-│       └── aaditya.jpg          # Profile portrait
-└── README.md                    # Project documentation & deployment guide
+│       └── aaditya.jpg
+└── README.md
 ```
 
----
+## Deployment
 
-## 🚀 Running Locally
-
-You can open `index.html` directly in any web browser, or launch a local server:
-
-```bash
-# Using Python
-python -m http.server 3000
-
-# Then open in your browser:
-# http://localhost:3000
-```
-
----
-
-## 🌐 Deploying in 1 Minute
-
-### GitHub Pages:
-1. Push this folder to a GitHub repository named `portfolio` or `<username>.github.io`.
-2. Go to **Settings > Pages > Source** and choose the `main` branch root.
-3. Your site is live!
-
-### Vercel / Netlify:
-- Simply drag and drop the project folder onto [Netlify Drop](https://app.netlify.com/drop) or import the repository in [Vercel](https://vercel.com) as a static site (zero build command needed).
+The site has no build step. It can be served from GitHub Pages, Netlify, or Vercel as a static site. Update the project and profile links in `index.html` and `assets/js/portfolio-data.js` when those destinations change.

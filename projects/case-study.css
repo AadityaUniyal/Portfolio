@@ -1,0 +1,18 @@
+@import url('../assets/css/style.css');
+@import url('../assets/css/components.css');
+@import url('../assets/css/portfolio-polish.css');
+@import url('../assets/css/experience.css');
+.case-page { width:min(100% - 2rem,980px); margin:auto; padding:7rem 0 5rem; }
+.case-nav { display:flex; justify-content:space-between; align-items:center; margin-bottom:5rem; font: .8rem var(--font-mono); }
+.case-nav a { color:var(--text-secondary); text-decoration:none; }
+.case-kicker { color:var(--world-accent); font: .75rem var(--font-mono); letter-spacing:.12em; text-transform:uppercase; }
+.case-page h1 { max-width:850px; margin:.9rem 0 1.2rem; font:700 clamp(3rem,8vw,6.8rem)/.98 var(--font-display); letter-spacing:-.065em; }
+.case-deck { max-width:720px; color:var(--text-secondary); font-size:clamp(1.1rem,2vw,1.35rem); line-height:1.75; }
+.case-links,.case-tags { display:flex; flex-wrap:wrap; gap:.7rem; margin:2rem 0; }
+.case-tags span { padding:.45rem .75rem; border:1px solid var(--border-subtle); border-radius:999px; color:var(--text-secondary); font:.75rem var(--font-mono); }
+.case-architecture { margin:3rem 0; padding:2rem; border:1px solid var(--border-subtle); border-radius:16px; background:rgba(255,255,255,.025); }
+.case-architecture p { margin:.8rem 0 0; color:var(--world-accent); font: .85rem/1.8 var(--font-mono); }
+.case-block { padding:2.5rem 0; border-top:1px solid var(--border-subtle); }
+.case-block h2 { margin:0 0 1rem; font:600 clamp(1.6rem,4vw,2.35rem) var(--font-display); }
+.case-block p { max-width:760px; color:var(--text-secondary); line-height:1.85; }
+.case-back { color:var(--world-accent)!important; }
